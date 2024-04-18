@@ -23,6 +23,7 @@ class MainMenu(BaseScreen):
             if value.isdigit():
                 value = int(value)
                 if value in range(1, len(self.clubs) + 1):
+                    # get club view to work
                     pass
             elif value.upper() == "C":
                 # get a new club created
