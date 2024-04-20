@@ -1,2 +1,5 @@
+4/20
+[ ] Get the clue view to edit players
+
 4/19
-Get the club view to show the players
+[x] Get the club view to show the players

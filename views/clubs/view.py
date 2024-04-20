@@ -23,9 +23,12 @@ class ClubView(BaseScreen):
             value = self.input_string()
             if value.upper() == "B":
                 return ClubListCmd()
+                # [ ] get view to go back
             elif value.upper() == "C":
                 return NoopCmd("player-create", club=self.club)
+                # [ ] Get view to add a player
             elif value.isdigit():
+                # [ ] get view to edit player
                 value = int(value)
                 return NoopCmd(
                     "player-view", club=self.club, player=self.club.players[value - 1]
