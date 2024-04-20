@@ -1,4 +1,5 @@
 from .base_screen import BaseScreen
+from views.clubs import ClubView
 # Create a club command
 from commands import ClubCreateCmd
 # from ..commands import 
@@ -24,6 +25,9 @@ class MainMenu(BaseScreen):
                 value = int(value)
                 if value in range(1, len(self.clubs) + 1):
                     # get club view to work
+                    club_view = ClubView(club=self.clubs[value - 1])
+                    club_view.display()
+                    club_view.get_command()
                     pass
             elif value.upper() == "C":
                 # get a new club created

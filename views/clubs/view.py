@@ -1,4 +1,4 @@
-from commands import ClubListCmd, NoopCmd
+# from commands import ClubListCmd, NoopCmd
 
 from ..base_screen import BaseScreen
 
