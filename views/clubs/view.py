@@ -22,7 +22,10 @@ class ClubView(BaseScreen):
             print("Type 'B' to go back to main menu.")
             value = self.input_string()
             if value.upper() == "B":
-                return ClubListCmd()
+                # return ClubListCmd()
+                self.clubs = GetClubsCommand().execute()
+                main = MainMenu(self.clubs)
+                main.run()
                 # [ ] get view to go back
             elif value.upper() == "C":
                 return NoopCmd("player-create", club=self.club)

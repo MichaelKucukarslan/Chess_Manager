@@ -1,6 +1,7 @@
 from .base_screen import BaseScreen
 from views.clubs import ClubView
-# Create a club command
+from views.clubs import ClubCreate
+
 from commands import ClubCreateCmd
 # from ..commands import 
 # Create a tournament command
@@ -24,17 +25,24 @@ class MainMenu(BaseScreen):
             if value.isdigit():
                 value = int(value)
                 if value in range(1, len(self.clubs) + 1):
-                    # get club view to work
                     club_view = ClubView(club=self.clubs[value - 1])
                     club_view.display()
                     club_view.get_command()
                     pass
             elif value.upper() == "C":
-                # get a new club created
+                create_club = ClubCreate()
+                create_club.display()
+                create_club.get_command()
                 pass
             elif value.upper() == "T":
+                club_view = ClubView(club=self.clubs[value - 1])
+                club_view.display()
+                club_view.get_command()
                 pass
             elif value.upper() == "X":
+                club_view = ClubView(club=self.clubs[value - 1])
+                club_view.display()
+                club_view.get_command()
                 break
 
     def run(self):
